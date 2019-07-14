@@ -1,4 +1,5 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request, abort
+
 
 app = Flask(__name__)
 
@@ -29,5 +30,12 @@ Yachmenev = [
 def get_Yachmenev():
     return jsonify({'Yachmenev': Yachmenev})
 
+@app.route('/api/Yachmenev/<int:nomer>', methods=['GET'])
+def get2_Yachmenev(nomer):
+    return jsonify({'Yachmenev': Yachmenev[nomer-1]})
+    
 if __name__ == '__main__':
     app.run(debug=True)
+    
+
+
