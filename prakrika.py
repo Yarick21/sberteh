@@ -33,6 +33,12 @@ def get_Yachmenev():
 @app.route('/api/Yachmenev/<int:nomer>', methods=['GET'])
 def get2_Yachmenev(nomer):
     return jsonify({'Yachmenev': Yachmenev[nomer-1]})
+
+@app.route('/api/Yachmenev/<int:nomer>', methods=['DELETE'])
+def delete_Yachmenev(nomer):
+    Yachmenev.remove(Yachmenev[nomer])
+    return jsonify({'result': True})
+
     
 if __name__ == '__main__':
     app.run(debug=True)
