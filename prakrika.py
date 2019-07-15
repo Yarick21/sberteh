@@ -6,12 +6,12 @@ app = Flask(__name__)
 Yachmenev = [
     {
         'id': 1,
-        'subject': u'vichmat',
+        'subject': u'Computational Mathematics',
         'rating': u'4'
     },
     {
         'id': 2,
-        'subject': u'Bondarb',
+        'subject': u'Electrical Engineering',
         'rating': u'4'
     },
     {
@@ -21,7 +21,7 @@ Yachmenev = [
     },
     {
         'id': 4,
-        'subject': u'EVM',
+        'subject': u'EVM&LU',
         'rating': u'5'
     }
 ]
