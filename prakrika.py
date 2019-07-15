@@ -39,6 +39,12 @@ def delete_Yachmenev(nomer):
     Yachmenev.remove(Yachmenev[nomer])
     return jsonify({'result': True})
 
+@app.route('/api/Yachmenev/<int:id>', methods=['PUT'])
+def update_task(id):
+    Yachmenev[id-1]['rating'] = request.json.get('rating')
+    Yachmenev[id-1]['subject'] = request.json.get('subject')
+    return jsonify({'Yachmenev/'+str(id): Yachmenev[id-1]})
+
     
 if __name__ == '__main__':
     app.run(debug=True)
